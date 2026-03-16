@@ -9,7 +9,7 @@
 //
 // Parameters:
 //   DEBOUNCE_LIMIT - Number of clock cycles the input must be stable.
-//                    Default 1_000_000 (~10 ms at 100 MHz).
+//                    Default 1_000_000 (~5 ms at 200 MHz, ~10 ms at 100 MHz).
 //-----------------------------------------------------------------------------
 module debounce #(
     parameter DEBOUNCE_LIMIT = 1_000_000

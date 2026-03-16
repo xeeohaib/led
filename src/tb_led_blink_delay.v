@@ -25,7 +25,7 @@ module tb_led_blink_delay;
     // Instantiate the DUT with reduced parameters
     led_blink_delay #(
         .CLK_FREQ_HZ   (CLK_FREQ_HZ),
-        .DELAY_STEP_MS  (DELAY_STEP_MS),
+        .DELAY_STEP_MS (DELAY_STEP_MS),
         .MAX_DELAY_MS   (MAX_DELAY_MS),
         .INIT_DELAY_MS  (INIT_DELAY_MS)
     ) uut (
