@@ -1,0 +1,25 @@
+# Vivado project files
+*.xpr
+*.jou
+*.log
+*.str
+*.bit
+*.ltx
+*.dcp
+
+# Vivado generated directories
+*.runs/
+*.srcs/
+*.sim/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.hbs/
+
+# Vivado HLS
+*.prj/
+
+# Temporary files
+*.tmp
+*.bak
+*~
