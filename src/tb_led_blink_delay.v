@@ -68,13 +68,18 @@ module tb_led_blink_delay;
         end
 
         // --- Observe LED at max delay ---
-        #(HALF_PERIOD * 2 * 2500);
+        // Split into two delays to avoid 32-bit integer overflow in XSim
+        // (HALF_PERIOD * 2 * 2500 = 2.5e9 exceeds 2^31-1)
+        #(HALF_PERIOD * 2500);
+        #(HALF_PERIOD * 2500);
 
         // --- Press again — delay should NOT increase beyond 2000 ms ---
         btn = 1;
         #(HALF_PERIOD * 2 * 20);
         btn = 0;
-        #(HALF_PERIOD * 2 * 2500);
+        // Split into two delays to avoid 32-bit integer overflow in XSim
+        #(HALF_PERIOD * 2500);
+        #(HALF_PERIOD * 2500);
 
         $display("TB: Simulation complete.");
         $finish;
